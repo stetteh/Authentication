@@ -24,9 +24,9 @@ namespace Authentication.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult Index()
-        {
-            return Json(model, JsonRequestBehavior.AllowGet);
-        }
+        //public ActionResult Index()
+        //{
+        //    return Json(model, JsonRequestBehavior.AllowGet);
+        //}
     }
 }
