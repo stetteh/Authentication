@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace Authentication.Models
               
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        //[Column(TypeName = "datetime2")]
         public DateTime DateOfBirth { get; set; }
         public string NickName { get; set; }
 

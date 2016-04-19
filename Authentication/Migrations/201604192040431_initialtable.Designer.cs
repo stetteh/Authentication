@@ -7,13 +7,13 @@ namespace Authentication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddnewProperties : IMigrationMetadata
+    public sealed partial class initialtable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddnewProperties));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialtable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201604191906541_AddnewProperties"; }
+            get { return "201604192040431_initialtable"; }
         }
         
         string IMigrationMetadata.Source

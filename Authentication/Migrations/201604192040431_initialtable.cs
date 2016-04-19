@@ -3,7 +3,7 @@ namespace Authentication.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddnewProperties : DbMigration
+    public partial class initialtable : DbMigration
     {
         public override void Up()
         {
