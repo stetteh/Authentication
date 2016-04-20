@@ -13,7 +13,7 @@ namespace Authentication.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201604192040431_initialtable"; }
+            get { return "201604200120536_initialtable"; }
         }
         
         string IMigrationMetadata.Source

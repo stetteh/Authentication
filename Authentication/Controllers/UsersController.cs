@@ -24,6 +24,7 @@ namespace Authentication.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
+        //[Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             var model = db.Users.Select(lg => new
@@ -31,8 +32,8 @@ namespace Authentication.Controllers
                 CurrentUser = lg.UserName,
                 EmailAddress = lg.Email,
                 First_Name = lg.FirstName,
-                DOB = lg.DateOfBirth
-                
+                DOB = lg.DateOfBirth,
+               Role = lg.Roles.ToList()
             });
             return Json(model, JsonRequestBehavior.AllowGet);
         }

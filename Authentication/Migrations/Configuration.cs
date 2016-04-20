@@ -30,6 +30,7 @@ namespace Authentication.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new UserManager<ApplicationUser>(userStore);
             var roleStore = new RoleStore<IdentityRole>(context);
@@ -39,6 +40,7 @@ namespace Authentication.Migrations
             {
                 roleManager.Create(new IdentityRole("Admin"));
                 roleManager.Create(new IdentityRole("Developer"));
+                roleManager.Create(new IdentityRole("Secretary"));
             }
 
             if (!context.Users.Any(x => x.UserName == "lsat@gmail.com"))
@@ -66,7 +68,7 @@ namespace Authentication.Migrations
                 };
                 userManager.Create(user, "OmyGoodness3$");
                 userManager.AddToRole(user.Id, "Developer");
-                userManager.AddToRole(user.Id, "Secretary");
+
 
                 var user2 = new ApplicationUser
                 {
@@ -91,7 +93,6 @@ namespace Authentication.Migrations
                 };
                 userManager.Create(user, "passwordT90#*");
                 userManager.AddToRole(user.Id, "Secretary");
-
 
             }
         }
