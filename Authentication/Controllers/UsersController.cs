@@ -24,9 +24,17 @@ namespace Authentication.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
-        //public ActionResult Index()
-        //{
-        //    return Json(model, JsonRequestBehavior.AllowGet);
-        //}
+        public ActionResult Index()
+        {
+            var model = db.Users.Select(lg => new
+            {
+                CurrentUser = lg.UserName,
+                EmailAddress = lg.Email,
+                First_Name = lg.FirstName,
+                DOB = lg.DateOfBirth
+                
+            });
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
     }
 }
