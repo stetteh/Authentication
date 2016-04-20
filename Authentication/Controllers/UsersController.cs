@@ -24,7 +24,7 @@ namespace Authentication.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             var model = db.Users.Select(lg => new
